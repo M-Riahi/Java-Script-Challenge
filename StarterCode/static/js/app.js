@@ -4,7 +4,7 @@ var tableData = data;
 // YOUR CODE HERE!
 var tbody = d3.select("tbody");
 
-// Function build table
+// Build Table Function
 function buildTable(data){
     // First, clear out existing data
     tbody.html("");
@@ -20,14 +20,14 @@ function buildTable(data){
     });
 }
 
-// Event that calls a function  name it handleClick
+// Hnadleclick function
 function handleClick(){
     d3.event.preventDefault() // prevent the form from refreshing the page
     
     let date = d3.select("#datetime").property("value");
     let filterData = tableData;
 
-    // Check to see if a date was entered and filter the data using that date
+    // Check if a date was entered and filter data based on date
     if (date){
         // Apply filter to the table data to only keep the 
         // rows where the datetime value matches the filter value
